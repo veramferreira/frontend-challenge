@@ -1,20 +1,22 @@
+
 type sidebarProps = {
   rows: number;
   columns: number;
 };
 
 export default function GridArea({ rows, columns }: sidebarProps) {
+
   const makeGridElements = () => {
     const gridElements = [];
 
     const totalGridArea = rows * columns;
 
     for (let i = 1; i <= totalGridArea; i++) {
-      const elementName = `element_${i}`;
+      const elementName = i;
       gridElements.push(
         <div key={elementName} className="grid--element">
           <div className="viewport--element">
-            <p>{elementName}</p>
+            <p className="element--text">{elementName}</p>
           </div>
         </div>
       );

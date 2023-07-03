@@ -18,7 +18,7 @@ export default function Sidebar({
     <section className="sidebar">
       <div className="inputs">
         <label htmlFor="rows">Rows</label>
-        <div className="rowInput">
+        <div className="row--input">
           <input
             type="range"
             id="rows"
@@ -30,8 +30,8 @@ export default function Sidebar({
           />
           <span>{rows}</span>
         </div>
-        <label htmlFor="columns">Columns</label>
-        <div className="columnInput">
+        <label htmlFor="columns" className="columns">Columns</label>
+        <div className="column--input">
           <input
             type="range"
             id="columns"
