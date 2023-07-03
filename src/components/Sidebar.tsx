@@ -28,7 +28,7 @@ export default function Sidebar({
             value={rows}
             onChange={handleRowInput}
           />
-          <span>{rows}</span>
+          <span className="input--number">{rows}</span>
         </div>
         <label htmlFor="columns" className="columns">Columns</label>
         <div className="column--input">
@@ -41,7 +41,7 @@ export default function Sidebar({
             value={columns}
             onChange={handleColumnInput}
           />
-          <span>{columns}</span>
+          <span className="input--number">{columns}</span>
         </div>
       </div>
     </section>
