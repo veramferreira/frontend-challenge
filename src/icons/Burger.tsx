@@ -7,8 +7,8 @@ import GridArea from "../components/GridArea";
  */
 export default function Burger() {
   const [isToggledOn, setIsToggledOn] = useState(false);
-  const [rows, setRows] = useState<number>(0);
-  const [columns, setColumns] = useState<number>(0);
+  const [rows, setRows] = useState<number>(1);
+  const [columns, setColumns] = useState<number>(1);
 
   const handleRowInput = (e: ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);

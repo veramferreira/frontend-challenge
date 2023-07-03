@@ -22,7 +22,7 @@ export default function Sidebar({
           <input
             type="range"
             id="rows"
-            min={0}
+            min={1}
             max={10}
             step={1}
             value={rows}
@@ -35,7 +35,7 @@ export default function Sidebar({
           <input
             type="range"
             id="columns"
-            min={0}
+            min={1}
             max={10}
             step={1}
             value={columns}
