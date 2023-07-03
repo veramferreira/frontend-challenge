@@ -1,4 +1,3 @@
-import { Container, Row, Col } from "react-grid-system";
 
 type sidebarProps = {
   rows: number;
@@ -6,19 +5,20 @@ type sidebarProps = {
 };
 
 export default function GridArea({ rows, columns }: sidebarProps) {
+
   const makeGridElements = () => {
     const gridElements = [];
 
     const totalGridArea = rows * columns;
 
     for (let i = 1; i <= totalGridArea; i++) {
-      const elementName = `element_${i}`;
+      const elementName = i;
       gridElements.push(
-        <Col key={elementName} className="grid--element">
+        <div key={elementName} className="grid--element">
           <div className="viewport--element">
-            <p>{elementName}</p>
+            <p className="element--text">{elementName}</p>
           </div>
-        </Col>
+        </div>
       );
     }
     return gridElements;
@@ -26,9 +26,16 @@ export default function GridArea({ rows, columns }: sidebarProps) {
 
   return (
     <section className="grid--container">
-      <Container>
-        <Row>{makeGridElements()}</Row>
-      </Container>
+      <div
+        className="grid--row"
+        style={{
+          display: "grid",
+          gridTemplateColumns: `repeat(${columns}, 1fr)`,
+          gridTemplateRows: `repeat(${rows}, 1fr)`,
+        }}
+      >
+        {makeGridElements()}
+      </div>
     </section>
   );
 }

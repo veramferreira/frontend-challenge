@@ -18,11 +18,11 @@ export default function Sidebar({
     <section className="sidebar">
       <div className="inputs">
         <label htmlFor="rows">Rows</label>
-        <div className="rowInput">
+        <div className="row--input">
           <input
             type="range"
             id="rows"
-            min={0}
+            min={1}
             max={10}
             step={1}
             value={rows}
@@ -30,12 +30,12 @@ export default function Sidebar({
           />
           <span>{rows}</span>
         </div>
-        <label htmlFor="columns">Columns</label>
-        <div className="columnInput">
+        <label htmlFor="columns" className="columns">Columns</label>
+        <div className="column--input">
           <input
             type="range"
             id="columns"
-            min={0}
+            min={1}
             max={10}
             step={1}
             value={columns}
