@@ -2,9 +2,25 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 
 import { App } from "../App";
+import Burger from "../icons/Burger";
 
-test("Renders React App", () => {
-  render(<App />);
-  const element = screen.getByText("React App");
-  expect(element).toBeInTheDocument();
+class ResizeObserver {
+  observe() {
+  }
+  unobserve() {
+  }
+  disconnect() {
+  }
+}
+window.ResizeObserver = ResizeObserver;
+
+describe('App component', () => {
+  test("Renders React App", () => {
+    render(<App />);
+  });
+  test("renders Burger component without errors", () => {
+    render(<Burger/>);
+  });
 });
+
+

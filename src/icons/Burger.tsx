@@ -2,9 +2,6 @@ import { ChangeEvent, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import GridArea from "../components/GridArea";
 
-/**
- * Burger Component
- */
 export default function Burger() {
   const [isToggledOn, setIsToggledOn] = useState(false);
   const [rows, setRows] = useState<number>(1);

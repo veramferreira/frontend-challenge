@@ -39,9 +39,8 @@ export default function GridArea({ rows, columns }: sidebarProps) {
     const totalGridArea = rows * columns;
 
     for (let i = 1; i <= totalGridArea; i++) {
-      const elementName = i;
       gridElements.push(
-        <div key={elementName} className="grid--element">
+        <div key={i} className="grid--element">
           <div className="viewport--element">
             <p className="element--text">{Math.floor(viewportSize.width)} </p>
             <p className="element--text">x</p>

@@ -14,6 +14,7 @@ export default function Sidebar({
   handleRowInput,
   handleColumnInput,
 }: sidebarProps) {
+  
   return (
     <section className="sidebar">
       <div className="inputs">
