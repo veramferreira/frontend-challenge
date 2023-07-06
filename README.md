@@ -13,7 +13,7 @@ This project was created as part of a frontend challenge for Motilient.
 
 ### Demo
 
-![](solution.gif)
+![](demo.gif)
 
 
 ## Requirements
